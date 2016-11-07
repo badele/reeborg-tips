@@ -12,33 +12,18 @@ def turn_right():
     for _ in range(3):
         turn_left()
 
-#############
-# Out the box
-#############
-while not front_is_clear():
-    turn_left()
-
-while front_is_clear():
-    move()
-
-while right_is_clear():
-    turn_right()
-    move()
-
-# Turn around
 while True:
+    color = color ^ 255
+    set_trace_color("rgb(%(color)s, 0, 0)" % locals())
+    
+    # Out of the corner
+    while not front_is_clear():
+        turn_right()
+    
+    # Turn around
     while front_is_clear():
-        # Test completely turn
-        if default_robot().body.x == 1 and default_robot().body.y == 2:
-            color = color ^ 255
-            set_trace_color("rgb(%(color)s, 0, 0)" % locals())
-            turn_left()
-            move()
-
-        # Test if robot can turn right
+        move()
         if right_is_clear():
             turn_right()
-
-        move()
-
-    turn_left()
+        elif not front_is_clear():
+            turn_left()
