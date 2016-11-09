@@ -1,5 +1,5 @@
 # Init world
-# Execute two times
+# Execute two times (for select the world and execute this code)
 World("Around 1")
 color=255
 set_trace_style("thick")

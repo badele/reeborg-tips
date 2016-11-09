@@ -1,9 +1,9 @@
 # Init world
-# Execute two times
+# Execute two times (for select the world and execute this code)
 
-###################################
-# !!! Around 2 and Around same code
-###################################
+#####################################
+# !!! Around 2 and Around 3 same code
+#####################################
 
 World("Around 2")
 color=255

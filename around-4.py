@@ -1,5 +1,5 @@
 # Init world
-# Execute two times
+# Execute two times (for select the world and execute this code)
 
 World("Around 4")
 color = 255
